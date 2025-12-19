@@ -20,3 +20,7 @@ This package was created with [Cookiecutter](https://github.com/audreyfeldroy/co
 
 This project is created as a homework to practice git workflow,
 branching strategies, linters, type checking and pre-commit hooks.
+## Usage
+
+This repository demonstrates a basic git workflow with feature branches,
+merges and pull requests.
