@@ -24,3 +24,9 @@ branching strategies, linters, type checking and pre-commit hooks.
 
 This repository demonstrates a basic git workflow with feature branches,
 merges and pull requests.
+
+## Notes
+
+This section was added in a separate feature branch to demonstrate
+a non fast-forward merge.
+
