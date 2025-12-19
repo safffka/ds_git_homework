@@ -16,3 +16,7 @@ Homework for git, linters and tooling
 ## Credits
 
 This package was created with [Cookiecutter](https://github.com/audreyfeldroy/cookiecutter) and the [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) project template.
+## Project purpose
+
+This project is created as a homework to practice git workflow,
+branching strategies, linters, type checking and pre-commit hooks.
