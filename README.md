@@ -24,3 +24,6 @@ branching strategies, linters, type checking and pre-commit hooks.
 
 This repository demonstrates a basic git workflow with feature branches,
 merges and pull requests.
+## Development
+
+All changes to the main branch should go through a pull request
