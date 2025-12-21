@@ -1,0 +1,30 @@
+experiment_name: titanic_tree
+
+s3:
+  bucket: datasets
+  processed_key: processed/titanic_processed.csv
+
+target_col: Survived
+
+features:
+  - Pclass
+  - Sex
+  - Age
+  - SibSp
+  - Parch
+  - Fare
+
+split:
+  test_size: 0.2
+  random_state: 42
+
+model:
+  type: decision_tree
+
+output:
+  model_s3_prefix: models
+
+param_grid:
+  max_depth: [3, 5, 7]
+  min_samples_split: [2, 5]
+  criterion: ["gini", "entropy"]
