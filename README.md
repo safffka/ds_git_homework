@@ -25,9 +25,28 @@ branching strategies, linters, type checking and pre-commit hooks.
 This repository demonstrates a basic git workflow with feature branches,
 merges and pull requests.
 
-## Development
+## Development setup
 
-All changes to the main branch should go through a pull request.
+Create a virtual environment and install all development dependencies:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
+pre-commit install
+```
+
+Run code quality checks manually:
+
+```bash
+flake8
+mypy src tests
+pre-commit run --all-files
+```
+
+During development all changes to the `main` branch must be made via Pull Requests.
+Commits that break code style or type checks will be blocked by pre-commit hooks.
+
 
 ## Notes
 
@@ -35,4 +54,4 @@ This section was added in a separate feature branch to demonstrate
 a non fast-forward merge.
 
 
-# test
+
