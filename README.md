@@ -30,9 +30,7 @@ merges and pull requests.
 Create a virtual environment and install all development dependencies:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e ".[dev]"
+uv sync
 pre-commit install
 ```
 
