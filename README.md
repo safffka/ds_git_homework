@@ -37,15 +37,29 @@ pre-commit install
 Run code quality checks manually:
 
 ```bash
-flake8
-mypy src tests
 pre-commit run --all-files
 ```
 
 During development all changes to the `main` branch must be made via Pull Requests.
 Commits that break code style or type checks will be blocked by pre-commit hooks.
 
+Running MLflow + MinIO
+```bash
+docker compose up -d
+docker compose --profile trainer run --rm trainer \
+  uv run python -m ds_git_homework.experiments.train \
+  --config configs/experiment.yaml \
+  --grid configs/grid.yaml
+```
+MinIO UI: http://localhost:9001
+MLflow UI: http://localhost:5001
+## Experiment tracking
 
+All ML experiments are tracked using **MLflow** and **S3 (MinIO)**.
+
+- Experiment metadata (parameters, metrics) are stored in MLflow
+- Trained models and artifacts are stored in S3 (MinIO)
+- No datasets or models are committed to Git
 ## Notes
 
 This section was added in a separate feature branch to demonstrate
