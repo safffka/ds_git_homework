@@ -1,2 +1,2 @@
-def do_something_useful():
-    print("Replace this with a utility function")
+def do_something_useful() -> None:
+    print("Doing something useful")
