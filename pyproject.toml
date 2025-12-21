@@ -4,54 +4,30 @@ version = "0.1.0"
 description = "Homework for git, linters and tooling"
 readme = "README.md"
 authors = [
-  {name = "Spitsin Savelii", email = "spisava@gmail.com"}
+  { name = "Spitsin Savelii", email = "spisava@gmail.com" }
 ]
 maintainers = [
-  {name = "Spitsin Savelii", email = "spisava@gmail.com"}
+  { name = "Spitsin Savelii", email = "spisava@gmail.com" }
 ]
-classifiers = [
-    # TODO
-]
-license = {text = "MIT"}
+license = { text = "MIT" }
+requires-python = ">=3.10"
+
 dependencies = [
-  "typer"
+  "typer",
 ]
-requires-python = ">= 3.10"
 
 [project.optional-dependencies]
-test = [
-    "coverage",  # testing
-    "pytest",  # testing
-    "ruff",  # linting
-    "ty", # checking types
-    "ipdb", # debugging
+dev = [
+  "flake8>=7.0.0",
+  "mypy>=1.10.0",
+  "pre-commit>=3.7.0",
+  "pytest",
 ]
 
 [project.urls]
-bugs = "https://github.com/safffka/ds_git_homework/issues"
-changelog = "https://github.com/safffka/ds_git_homework/blob/master/changelog.md"
 homepage = "https://github.com/safffka/ds_git_homework"
+bugs = "https://github.com/safffka/ds_git_homework/issues"
+changelog = "https://github.com/safffka/ds_git_homework/blob/main/HISTORY.md"
 
 [project.scripts]
 ds_git_homework = "ds_git_homework.cli:app"
-
-[tool.ty]
-# All rules are enabled as "error" by default; no need to specify unless overriding.
-# Example override: relax a rule for the entire project (uncomment if needed).
-# rules.TY015 = "warn"  # For invalid-argument-type, warn instead of error.
-
-[tool.ruff]
-line-length = 120
-
-[tool.ruff.lint]
-select = [
-    "E",   # pycodestyle errors
-    "W",   # pycodestyle warnings
-    "F",   # Pyflakes
-    "I",   # isort
-    "B",   # flake8-bugbear
-    "UP",  # pyupgrade
-]
-
-[tool.uv]
-package = true
