@@ -29,3 +29,12 @@ changelog = "https://github.com/safffka/ds_git_homework/blob/main/HISTORY.md"
 
 [project.scripts]
 ds_git_homework = "ds_git_homework.cli:app"
+[tool.uv]
+package = true
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+ignore_missing_imports = true
+disable_error_code = ["untyped-decorator"]
+exclude = "__pycache__"
