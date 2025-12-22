@@ -24,7 +24,13 @@ dependencies = [
     "pandas",
     "mlflow",
     "pyyaml",
-    "PyYAML"
+    "PyYAML",
+    "fastapi",
+    "uvicorn[standard]",
+    "httpx",
+    "numpy",
+    "fastapi",
+    "pydantic",
 ]
 
 [project.urls]
@@ -43,3 +49,4 @@ strict = true
 ignore_missing_imports = true
 disable_error_code = ["untyped-decorator"]
 exclude = "__pycache__"
+plugins =  ["pydantic.mypy"]

@@ -9,3 +9,6 @@ repos:
     hooks:
       - id: mypy
         args: ["--strict"]
+        additional_dependencies:
+          - pydantic>=2
+          - types-PyYAML
